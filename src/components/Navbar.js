@@ -26,13 +26,12 @@ const Navbar = () => {
         role="button"
         tabIndex={0}
         className={isOpen ? 'hideMenu' : 'showMenu'}
-        onClick={ToggleNav}
         onKeyPress={handleKeyPress}
       >
-        <img src={menu} alt="hamburger" className="hamburger" />
+        <img src={menu} onClick={ToggleNav} alt="hamburger" className="hamburger" />
       </div>
 
-      <div className="desktopLogo">
+      <div className={isOpen ? 'desktopLogoNone' : 'desktopLogo'} >
         <img src={office} className="hamburger" alt="hamburgerDesktop" />
       </div>
 
@@ -49,11 +48,10 @@ const Navbar = () => {
         <div
           role="button"
           tabIndex={0}
-          onClick={closeNav}
           onKeyPress={handleKeyPress}
           className="hamburger hamClose"
         >
-          <img src={close} className="hamburger hamClose" alt="hamburgerClose" />
+          <img src={close} onClick={closeNav} className="hamburger hamClose" alt="hamburgerClose" />
         </div>
       </div>
     </div>

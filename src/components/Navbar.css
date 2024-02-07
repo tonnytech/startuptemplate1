@@ -1,6 +1,9 @@
 .NavbarMainContainer {
   margin-bottom: 0;
   padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 ul {
@@ -15,6 +18,10 @@ ul {
 }
 
 .desktopLogo {
+  display: unset;
+}
+
+.desktopLogoNone {
   display: none;
 }
 
@@ -24,7 +31,9 @@ ul {
 
 .open {
   display: flex;
-  justify-content: space-between !important;
+  justify-content: space-between;
+  width: 100%;
+
 }
 
 .navbarListContainer {
